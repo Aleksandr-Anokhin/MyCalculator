@@ -3,9 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:background="@drawable/orion">
+    android:layout_height="match_parent"
+    android:background="@drawable/orion"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="@+id/key_plus"
+        app:layout_constraintStart_toStartOf="@id/key_dot"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
         android:id="@+id/key_dot"
@@ -13,9 +32,9 @@
         android:layout_height="wrap_content"
         android:text="@string/key_dot"
         app:layout_constraintEnd_toStartOf="@+id/key_0"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/key_0"
@@ -24,16 +43,16 @@
         android:text="@string/key_0"
         app:layout_constraintEnd_toStartOf="@id/key_percent"
         app:layout_constraintStart_toEndOf="@id/key_dot"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/key_percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_percent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/key_plus"
         app:layout_constraintStart_toEndOf="@id/key_0"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/key_plus"
@@ -42,7 +61,7 @@
         android:text="@string/key_plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/key_percent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/key_7"
@@ -145,15 +164,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/key_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/key_2"
         app:layout_constraintStart_toStartOf="@id/key_1"
-        app:layout_constraintTop_toBottomOf="@id/key_1" />
+        app:layout_constraintTop_toBottomOf="@id/key_2" />
 
     <Button
         android:id="@+id/key_equally"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/key_equally"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/key_share"
         app:layout_constraintStart_toStartOf="@id/key_3"
-        app:layout_constraintTop_toBottomOf="@id/key_3" />
+        app:layout_constraintTop_toBottomOf="@id/key_share" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

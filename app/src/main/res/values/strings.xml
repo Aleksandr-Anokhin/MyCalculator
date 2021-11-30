@@ -18,4 +18,6 @@
     <string name="key_share">/</string>
     <string name="key_multiply">*</string>
     <string name="key_percent">%</string>
+    <string name="textView" />
+    <string name="editText" />
 </resources>
