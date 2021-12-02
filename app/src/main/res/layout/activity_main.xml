@@ -8,23 +8,24 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/buttonText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="42sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
+        android:textSize="52sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ResultView"
+        app:layout_constraintEnd_toEndOf="@+id/ResultView"
+        app:layout_constraintStart_toStartOf="@+id/ResultView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/ResultView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="42sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/key_plus"
         app:layout_constraintStart_toStartOf="@id/key_dot"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonText" />
 
     <Button
         android:id="@+id/key_dot"
@@ -34,7 +35,7 @@
         app:layout_constraintEnd_toStartOf="@+id/key_0"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/ResultView" />
 
     <Button
         android:id="@+id/key_0"
@@ -43,7 +44,7 @@
         android:text="@string/key_0"
         app:layout_constraintEnd_toStartOf="@id/key_percent"
         app:layout_constraintStart_toEndOf="@id/key_dot"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/ResultView" />
 
     <Button
         android:id="@+id/key_percent"
@@ -52,7 +53,7 @@
         android:text="@string/key_percent"
         app:layout_constraintEnd_toStartOf="@+id/key_plus"
         app:layout_constraintStart_toEndOf="@id/key_0"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/ResultView" />
 
     <Button
         android:id="@+id/key_plus"
@@ -61,7 +62,7 @@
         android:text="@string/key_plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/key_percent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/ResultView" />
 
     <Button
         android:id="@+id/key_7"
